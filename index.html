@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张拉整体机器人 — 国际研究文献汇总</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Microsoft YaHei','Segoe UI',sans-serif;background:#f4f6f9;color:#222;padding:28px 36px;}
+  h1{font-size:26px;color:#0B2A4A;margin-bottom:4px;}
+  .sub{color:#999;font-size:12px;margin-bottom:24px;}
+  .sec{margin-bottom:30px;}
+  .sec h2{font-size:16px;color:#0B2A4A;border-left:4px solid #1A6BC0;padding-left:10px;margin-bottom:12px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px;}
+  .card{background:#fff;border-radius:8px;padding:15px 18px;box-shadow:0 1px 4px rgba(0,0,0,0.05);display:flex;gap:12px;align-items:flex-start;transition:box-shadow .15s;}
+  .card:hover{box-shadow:0 3px 12px rgba(0,0,0,0.10);}
+  .card .n{width:26px;height:26px;border-radius:50%;background:#0B2A4A;color:#fff;font-size:12px;font-weight:bold;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+  .card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle;color:#fff;}
+  .card .tag.hyd{background:#C62828;}
+  .card .tag.min{background:#E67E22;}
+  .card .tag.jmp{background:#6A1B9A;}
+  .card .info{flex:1;min-width:0;}
+  .card .t{font-size:14px;font-weight:bold;color:#0B2A4A;margin-bottom:2px;}
+  .card .a{font-size:11px;color:#999;margin-bottom:4px;}
+  .card .d{font-size:11px;color:#555;margin-bottom:6px;line-height:1.5;}
+  .card a{font-size:11px;color:#1A6BC0;text-decoration:none;word-break:break-all;}
+  .card a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<h1>张拉整体机器人 — 国际研究文献汇总</h1>
+<p class="sub">液压 · 气动 · 少驱动器（1-2个）· 跳跃/爬行/滚动 · 2025年6月整理 | 共收录 20+ 篇</p>
+
+<!-- ====== 液压/气动线性驱动 ====== -->
+<div class="sec">
+  <h2>🔴 液压 / 气动线性驱动（与你的方向最接近）</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="n">1</div>
+      <div class="info">
+        <div class="t">Untethered Hydraulic Tensegrity Robot <span class="tag hyd">液压</span><span class="tag min">少驱动</span></div>
+        <div class="a">Joran Booth · UC Berkeley · 个人项目页</div>
+        <div class="d">全球唯一公开的液压张拉整体原型。单三角面驱动，无独立油箱的创新液压回路，6杆8面主动控制。遗憾：泵太慢、行程不够。</div>
+        <a href="https://joranbooth.com/portfolio/untethered-hydraulic-tensegrity-robot/" target="_blank">项目主页</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">2</div>
+      <div class="info">
+        <div class="t">Spikebot: Multigait Tensegrity with Linearly Extending Struts <span class="tag hyd">气动</span><span class="tag jmp">跳跃</span></div>
+        <div class="a">Jeong, Kim, Booth, Kramer-Bottiglio et al. · Soft Robotics, 2024</div>
+        <div class="d">6杆二十面体，每杆 = 2个气动线性缸（45mm行程）。三种运动模式：推力滚动、失稳滚动、推力跳跃。Arduino+电磁阀控制，外部气源。</div>
+        <a href="https://doi.org/10.1089/soro.2023.0030" target="_blank">Soft Robotics 论文</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.x-mol.com/paper/1729915164251934720" target="_blank">X-MOL 中文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">3</div>
+      <div class="info">
+        <div class="t">Pneumatically Driven Tensegrity Manipulator without Mechanical Springs <span class="tag hyd">气动</span></div>
+        <div class="a">IROS 2022 · 40个气动缸 · 变刚度</div>
+        <div class="d">40个气动缸驱动的张拉整体机械臂，无机械弹簧，纯气动实现变刚度。虽然不是移动机器人，但气动线性驱动+张拉整体的思路直接可迁移。</div>
+        <a href="https://ieeexplore.ieee.org" target="_blank">IEEE Xplore (IROS 2022)</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====== 少驱动器（1-2个）===== -->
+<div class="sec">
+  <h2>🟠 少驱动器（1-2个）— 张拉整体极简运动</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="n">4</div>
+      <div class="info">
+        <div class="t">Vibration-Driven Mobile Robots Based on Single Actuated Tensegrity <span class="tag min">单驱动</span></div>
+        <div class="a">Böhm, Zimmermann et al. · ICRA 2013 · TU Ilmenau (德国)</div>
+        <div class="d">单驱动器振动驱动2杆张拉整体，运动方向仅靠频率控制。后续多篇论文延伸至多稳态跳跃、双向爬行。和你的单缸方案思路一致。</div>
+        <a href="https://ieeexplore.ieee.org/document/6631362" target="_blank">IEEE 论文</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.tu-ilmenau.de/en/university/departments/department-of-mechanical-engineering/profile/institutes-and-groups/mechanics-of-compliant-systems-group" target="_blank">实验室主页</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">5</div>
+      <div class="info">
+        <div class="t">Jumping Locomotion Based on Multistable Tensegrity <span class="tag min">单驱动</span><span class="tag jmp">跳跃</span></div>
+        <div class="a">Schorr, Zentner, Zimmermann, Böhm · MSSP, 2021 · TU Ilmenau</div>
+        <div class="d">2D张拉整体结构，4个稳定平衡点。单驱动器切换平衡态，释放大能量差产生跳跃。可前进/后退跳跃翻越障碍。物理样机验证。</div>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0888327021001234" target="_blank">MSSP 论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">6</div>
+      <div class="info">
+        <div class="t">TJUBot — 蠕虫式平面张拉整体移动机器人 <span class="tag min">双驱动</span></div>
+        <div class="a">Yang, Liu, Wang, Song, Sun · Mechanism & Machine Theory, 2024 · 天津大学</div>
+        <div class="d">仅用<strong>2个电机</strong>实现蚯蚓式、尺蠖式、翻滚<strong>三种运动模式</strong>。弹簧减少驱动器数量。模块化设计，增加模块无需增加驱动器。</div>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0094114X23002471" target="_blank">MMT 论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">7</div>
+      <div class="info">
+        <div class="t">高速多模式小型无系绳张拉整体机器人 <span class="tag min">双驱动</span></div>
+        <div class="a">Yang, Yu, Liu, Lian, Sun · IEEE RA-L, 2023 · 天津大学</div>
+        <div class="d"><strong>2个电机</strong>，仅<strong>160g</strong>（11cm×9cm×5.5cm），速度<strong>222.1 BL/min</strong>（张拉整体最快纪录）。5种运动模式：蚯蚓/尺蠖/翻滚/滚动/混合。</div>
+        <a href="https://sciprofiles.com/publication/view/49971ae635113a82519e77545561a6db" target="_blank">IEEE RA-L 论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">8</div>
+      <div class="info">
+        <div class="t">Dual-Pendulum Prismatic Tensegrity — 消除锯齿滚动 <span class="tag min">双驱动</span></div>
+        <div class="a">IEEE ROBIO, 2025 · 国家自然科学基金 (52205026, 52575008) · 上海</div>
+        <div class="d">仅用<strong>2个电机</strong>+双摆锤策略，实现平滑直线滚动和原地转向。消除传统张拉整体锯齿滚动问题。9杆正棱柱构型。</div>
+        <a href="https://dtic.dimensions.ai/details/publication/pub.1198706540" target="_blank">论文详情</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">9</div>
+      <div class="info">
+        <div class="t">Underactuated Legged-Rolling of Minimal Two-Rod Tensegrity <span class="tag min">欠驱动</span></div>
+        <div class="a">Zheng, Xiang, He, Asano, Tokuda · IEEE RA-L, 2025</div>
+        <div class="d">极简2杆4索张拉整体，欠驱动腿式滚动，两相控制策略。具备<strong>自恢复能力</strong>，可爬楼梯和斜坡。</div>
+        <a href="https://doi.org/10.1109/LRA.2025.3595074" target="_blank">IEEE RA-L 论文</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.semanticscholar.org/paper/Underactuated-Legged-Rolling-Locomotion-of-a-Robot-Zheng-Xiang/4169d8d776696a510c9056bdc64e653d73167716" target="_blank">Semantic Scholar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">10</div>
+      <div class="info">
+        <div class="t">Bistable Tensegrity Robot — 单电机可重复跳跃 <span class="tag min">单驱动</span><span class="tag jmp">跳跃</span></div>
+        <div class="a">Shimura, Iwamoto, Umedachi · IROS 2023 (Award Finalist) · 信州大学 (日本)</div>
+        <div class="d">仅用<strong>1个电机</strong>控制3根肌腱，利用双稳态snap-through实现可重复跳跃。可爬楼梯。</div>
+        <a href="https://events.infovaya.com/presentation?id=109826" target="_blank">IROS 2023 项目页</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">11</div>
+      <div class="info">
+        <div class="t">Inchworm Soft Crawling Robot Driven by Tensegrity <span class="tag min">单驱动</span></div>
+        <div class="a">Li, Huang, Liu, Ma, Yin · YAC 2024 (IEEE)</div>
+        <div class="d"><strong>单电机</strong>驱动张拉整体单元实现尺蠖爬行。对称环状鳞片模仿刚毛实现摩擦差动。完全无系绳，电子元件内置于软体内。</div>
+        <a href="https://www.semanticscholar.org/paper/Design%2C-Fabrication-and-Analysis-of-a-Soft-Crwaling-Li-Huang/02d7a697604fe2e76dc1ce3175040b6d6dd7d3e1" target="_blank">Semantic Scholar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">12</div>
+      <div class="info">
+        <div class="t">Low-cost Wireless Modular Soft Tensegrity Robots <span class="tag min">极简</span></div>
+        <div class="a">Rieffel et al. · RoboSoft 2019 · Union College (美国)</div>
+        <div class="d">首个无线振动张拉整体平台，低成本模块化设计，演化算法优化形态和步态。极简设计理念先驱。</div>
+        <a href="https://www.union.edu/physics/faculty-staff/john-rieffel" target="_blank">教授主页</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====== 跳跃 ====== -->
+<div class="sec">
+  <h2>🟣 跳跃张拉整体</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="n">13</div>
+      <div class="info">
+        <div class="t">ETH Zurich — High-Jumping Tensegrity for Space Exploration <span class="tag jmp">跳跃最高</span></div>
+        <div class="a">Baines, Tischhauser · ETH Zurich Robotic Systems Lab</div>
+        <div class="d">垂直跳跃<strong>1.18m（1.93倍体长）</strong>，水平0.59m，从<strong>21.5m高度跌落无损</strong>。功倍增储能释放机制。面向太空探索。</div>
+        <a href="https://sirop.org/app/98f39188-2ef7-43df-b2aa-44c4866afaae" target="_blank">SiROP 项目页</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">14</div>
+      <div class="info">
+        <div class="t">SJTU — 柔性张拉整体跳跃机器人 <span class="tag jmp">跳跃</span></div>
+        <div class="a">Chen, Yan, Wang, Chen · J. Phys.: Conf. Ser., 2025 · 上海交通大学</div>
+        <div class="d">弹性板替代刚性杆作为储能元件，行星齿轮快速释放机构。仅<strong>122g跳420mm</strong>（3.4倍体长），集成自扶正+转向+起跳角度调节。</div>
+        <a href="https://doi.org/10.1088/1742-6596/3097/1/012010" target="_blank">IOP 论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">15</div>
+      <div class="info">
+        <div class="t">Design & Experimentation of Tensegrity Jumping Robots <span class="tag jmp">跳跃</span></div>
+        <div class="a">Tang, Yang, Lian · Applied Sciences, 2024</div>
+        <div class="d">双模块张拉整体跳跃机器人，拉格朗日动力学建模。弹性索刚度+初始倾斜角影响跳跃性能。同步vs分步跳跃能耗对比。</div>
+        <a href="https://scholar.oversea.cnki.net/en/Detail/index/GARJ2021_5/SJMD238DF96D3F4F815C67508D8B2BFF0C68" target="_blank">论文详情</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">16</div>
+      <div class="info">
+        <div class="t">Sungkyunkwan Univ. — SMA弹簧跳跃张拉整体 <span class="tag jmp">跳跃</span></div>
+        <div class="a">Chung, Lee, Rodrigue et al. · ACS Appl. Mater. Interfaces, 2019</div>
+        <div class="d">扭转预应力SMA弹簧驱动，马氏体相储能→奥氏体相爆发释放。球形张拉整体跳跃近1倍体长。可滚动0.14 BL/s。</div>
+        <a href="https://doi.org/10.1021/acsami.9b13062" target="_blank">ACS 论文</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====== 国内研究 ====== -->
+<div class="sec">
+  <h2>🇨🇳 国内研究团队</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="n">17</div>
+      <div class="info">
+        <div class="t">天津大学 — TJUBot / 簇状张拉整体团队</div>
+        <div class="a">孙涛教授团队 · 天津大学机械工程学院</div>
+        <div class="d">国内张拉整体少驱动方向最活跃的团队。2电机实现多种运动模式（MMT 2024, IEEE RA-L 2023, JMR 2023, Sci. China 2023）。</div>
+        <a href="https://www.x-mol.com/paper/1699930266871287808/t" target="_blank">MMT 论文 (X-MOL)</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">18</div>
+      <div class="info">
+        <div class="t">山东大学 — 爬行-跳跃一体张拉整体机器人 专利</div>
+        <div class="a">李贻斌教授团队 · 山东大学控制科学与工程学院</div>
+        <div class="d">发明专利 CN202310547571.6。实现爬行与跳跃一体化。和你的方案C（爬行+跳跃）方向高度吻合。</div>
+        <a href="https://faculty.sdu.edu.cn/liyibin/en/zlcg/501206/content/84916.htm#zlcg" target="_blank">专利页面 (李贻斌主页)</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">19</div>
+      <div class="info">
+        <div class="t">北京理工大学 — 张拉整体跨域机器人</div>
+        <div class="a">《机器人》期刊, 2025, 47(3): 338-347</div>
+        <div class="d">六杆张拉整体结构实现地面滚动+空中飞行跨域运动。多模态步态规划与切换控制。</div>
+        <a href="https://robot.sia.cn/cn/article/id/53ce178b-6bd4-4638-91aa-af8ded96fb76" target="_blank">《机器人》论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">20</div>
+      <div class="info">
+        <div class="t">长春工业大学 — 六杆张拉整体翻滚机器人驱动优化</div>
+        <div class="a">《机器人》期刊, 2024/2025</div>
+        <div class="d">六杆张拉整体翻滚机器人驱动参数优化设计。杆件后屈曲驱动行走数值仿真（重庆大学学报, 2024）。</div>
+        <a href="https://robot.sia.cn/article/cstr/32165.14.robot.240188" target="_blank">《机器人》论文</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">21</div>
+      <div class="info">
+        <div class="t">张拉整体机器人杆件后屈曲驱动行走数值仿真</div>
+        <div class="a">重庆大学学报, 2024年第8期</div>
+        <div class="d">杆件后屈曲作为驱动机制，利用结构失稳产生运动，和张拉整体的被动变形驱动思路一致。</div>
+        <a href="https://read.cnki.net/web/Journal/Article/FIVE202408009.html" target="_blank">知网</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====== 经典标杆 ====== -->
+<div class="sec">
+  <h2>🚀 经典标杆</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="n">22</div>
+      <div class="info">
+        <div class="t">NASA SUPERball / ReCTeR — 行星探测张拉整体</div>
+        <div class="a">Dynamic Tensegrity Robotics Lab · NASA Ames · SunSpiral, Agogino</div>
+        <div class="d">6杆24索二十面体，可折叠90%体积发射，着陆后展开。CPG控制+强化学习。部分索断裂仍能运动——验证了张拉整体的容错性。</div>
+        <a href="https://www.nasa.gov/wp-content/uploads/2015/04/niac_sunspiral_superballbot_phaseii_finalreport_tagged.pdf" target="_blank">NIAC 最终报告 (PDF)</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/NASA-Tensegrity-Robotics-Toolkit/NTRTsim" target="_blank">开源仿真工具 NTRTsim</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">23</div>
+      <div class="info">
+        <div class="t">Colorado State — 张拉整体轮+双稳态跳跃机器人</div>
+        <div class="a">Spiegel, Zhao, Sun · IEEE/ASME Trans. Mechatronics, 2023</div>
+        <div class="d">形状可变张拉整体轮+双稳态跳跃。跳高300mm，负重5倍自重。沙地/草地/冰雪/岩石全地形。</div>
+        <a href="https://csustrata.org/technology-transfer/available-technology/novel-robot-design-for-moving-in-challenging-indoor-and-outdoor-environments/" target="_blank">CSU STRATA 页面</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="n">24</div>
+      <div class="info">
+        <div class="t">Tensegrity Robotics 综述</div>
+        <div class="a">Shah, Booth, Baines, Wang, Kramer-Bottiglio et al. · Soft Robotics, 2022 (IF 6.4) · Yale/UC Berkeley</div>
+        <div class="d">张拉整体机器人最全面的综述论文。涵盖滚动/振动/跳跃/爬行全部运动模式、驱动方式、建模方法。入门必读。</div>
+        <a href="https://www.x-mol.com/paper/1453883110266404864/t" target="_blank">X-MOL 中文</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
